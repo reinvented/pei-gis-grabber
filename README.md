@@ -3,7 +3,7 @@ PEI GIS Grabber
 
 The Province of Prince Edward Island, Canada provides access to [free GIS data via its website](http://www.gov.pe.ca/gis/index.php3?number=77543&lang=E).
 
-Unfortunately they have an (inane) requirement to enter name, email and occupation for every download, making complete download of all files cumbersome.
+Unfortunately the mechanism for downloading this data is cumbersome and form-based.
 
 This script solves that problem by automating the download.
 
@@ -12,7 +12,7 @@ Requirements
 
 * PHP 5.x
 * PHP Simple HTML DOM Parser (from http://simplehtmldom.sourceforge.net/)
-* wget (from http://www.gnu.org/s/wget/)
+* wget (from http://www.gnu.org/s/wget/) -- *you probably already have this*
 
 Usage
 -----

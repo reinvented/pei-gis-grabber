@@ -9,7 +9,7 @@
   * for every download, making complete download of all files cumbersome.
   *
   * This script solves that problem by automating the download.
-  *     
+  *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
   * the Free Software Foundation; either version 2 of the License, or (at
@@ -25,9 +25,9 @@
   * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
   * USA
   *
-  * @version 0.1, October 12, 2011
+  * @version 0.2, April 21, 2017
   * @author Peter Rukavina <peter@rukavina.net>
-  * @copyright Copyright &copy; 2011, Reinvented Inc.
+  * @copyright Copyright &copy; 2017, Reinvented Inc.
   * @license http://www.fsf.org/licensing/licenses/gpl.txt GNU Public License
   */
 
@@ -66,7 +66,7 @@ foreach($gisPages as $filename => $url) {
 }
 
 /**
-  * Now use 'wget' to download every SHP file to directly.
+  * Now use 'wget' to download every SHP file directly.
   */
 foreach ($maplinks as $key => $link) {
     parse_str($link,$linkparts);
