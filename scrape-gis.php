@@ -5,10 +5,8 @@
   * The Province of Prince Edward Island provides access to free GIS data via its website
   * from http://www.gov.pe.ca/gis/index.php3?number=77543&lang=E
   *
-  * Unfortunately they have an (inane) requirement to enter name, email and occupation
-  * for every download, making complete download of all files cumbersome.
-  *
-  * This script solves that problem by automating the download.
+  * This script allows you to easily download *all* of the GIS data available in a
+  * form suitable for loading into QGIS.
   *
   * This program is free software; you can redistribute it and/or modify
   * it under the terms of the GNU General Public License as published by
@@ -78,7 +76,7 @@ foreach($gisPages as $folder => $url) {
 }
 
 /**
-  * Now use 'wget' to download every SHP file to directly.
+  * Start off a PyQGIS Script that we'll add to as we iterate.
   */
 
 $fp = fopen($downloadDir . "importlayers.py", "w");
@@ -88,6 +86,9 @@ fwrite($fp, "\tQgsVectorLayer\n");
 fwrite($fp, ")\n");
 fwrite($fp, "root = QgsProject.instance().layerTreeRoot()\n");
 
+/**
+  * Now use 'wget' to download every SHP file to directly.
+  */
 $created_group = array();
 foreach ($maplinks as $key => $maplink) {
   parse_str($maplink['link'], $linkparts);
